@@ -1,0 +1,102 @@
+.signup-section{
+    text-align: center;
+    background-color: #F2E8DF;
+    padding:65px 3px ;
+  }
+
+input[type=email]{
+    width: 90%;
+    height: 40px;
+    border-color: #000000;
+    border: 0.1px solid ;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+::-webkit-input-placeholder { 
+    color: #000000;
+}
+
+.signup-button button{
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 2px;
+    margin-top: 25px;
+    width: 30%;
+}
+.signup-section p{
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .signup-section{
+        padding:50px 60px ;
+    }
+
+    form{
+        display: flex;
+        padding: 0px 90px;
+        flex-direction: row;
+    }
+
+    input[type=email]{
+        width:335px;
+        height: 45px;
+    }
+
+    .signup-button button{
+        width: 110px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 991px) and (max-width:1199px) {
+    .signup-section{
+        padding:50px 180px ;
+    }
+
+    form{
+        display: flex;
+        padding: 0px 100px;
+        flex-direction: row;
+    }
+
+    input[type=email]{
+        width:335px;
+        height: 45px;
+    }
+
+    .signup-button button{
+        width: 110px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 1199px) and (max-width:1440px) {
+    .signup-section{
+        padding:50px 300px ;
+    }
+
+    form{
+        display: flex;
+        padding: 0px 100px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    input[type=email]{
+        width:335px;
+        height: 45px;
+    }
+
+    .signup-button button{
+        width: 110px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+}
