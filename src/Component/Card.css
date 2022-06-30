@@ -1,0 +1,137 @@
+.card .podcast-image-container{
+    display: flex;
+}
+
+.card .podcast-image{
+    width: 50px;
+    height: 50px;
+}
+
+#first{
+    background-color: green;
+    position: relative;
+}
+
+#second{
+    background-color: red;
+    position: relative;
+}
+
+#third{
+    background-color: antiquewhite;
+    position: relative;
+}
+#fourth{
+    background-color: aqua;
+    position: relative;
+}
+
+#fifth{
+    background-color: #1B4E60;
+    position: relative;
+}
+
+.toggle{
+    width: 1px;
+    height: 1px;
+    border: 1px solid black;
+    background-color: #000000;
+    margin-bottom: 5px;
+    margin-left: 45px;
+}
+
+.card{
+    padding: 20px 20px;
+    background-color: #CCC6C7;
+    border-radius: 16px;
+    text-align: start;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.text{
+    padding: 15px 0px;
+}
+
+hr{
+    border:0.1px solid #000000;
+    background-color: #000000;
+}
+
+.card-bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.user-details{
+    display: flex;
+    padding: -5px 10px;
+}
+.user-image{
+    width: 30px;
+    height: 30px;
+}
+.user-image img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.user-info{
+    padding: 0px 10px;
+}
+.user-name{
+    width: 72px;
+    height: 15px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 115%;
+    color: #222222;
+    margin-top: 0px;
+}
+
+.hark-editor{
+    width: 75px;
+    height: 12px;
+    font-family: 'SF Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 110%;
+    color: #222222;
+    opacity: 0.7;
+}
+
+.clip-details{
+    display: flex;
+}
+
+.clip-info p{
+    width: 48px;
+    height: 24px;
+    font-family: 'SF Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+
+
+.clip-info{
+    padding: 0px 10px;
+}
+
+@media only screen and (min-width: 991px) and (max-width:1440px) {
+    .toggle{
+        display: none;
+    }
+}
