@@ -1,14 +1,18 @@
-import Podcast from "./Component/Podcast";
-import Signup from "./Component/Signup";
-import Footer from "./Component/Footer";
+import Podcast from './Component/Podcast/Podcast';
+import Signup from './Component/Signup/Signup';
+import Footer from './Component/Footer/Footer'
 import './App.css';
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <Podcast/>
+    <Router>
+      <Podcast />
       <Signup />
       <Footer />
+    </Router>
+
     </>
   );
 }

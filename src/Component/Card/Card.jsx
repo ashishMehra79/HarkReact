@@ -1,6 +1,8 @@
 import './Card.css'
-import image from './../Images/goku.jpeg';
+import image from './../../Images/goku.jpeg';
+import { useSelector } from 'react-redux';
 function Card(){
+    const cards = useSelector((state) => state);
     return(
             <div className="card">
                 <div className="podcast-image-container">

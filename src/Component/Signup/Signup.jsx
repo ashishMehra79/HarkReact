@@ -1,4 +1,4 @@
-import './Signup.css';
+import './/Signup.css';
 function Signup(){
     return(
             <div className="signup-section">
