@@ -25,7 +25,7 @@ function Podcast(){
     useEffect(()=>{
         fetchTags();
         fetchCards();
-    }, []);
+    },[]);
 
     // console.log("tags:",tags);
 
@@ -39,27 +39,39 @@ function Podcast(){
         const response = await axios.get("https://beta.harkaudio.com/api/v0/entities/searchviatags?tags=1&type=harklist").catch((err) => {
             console.log('Error', err);
         });
-        // console.log(response.data.dictionary);
-        dispatchCards(setHarklist(response.data.dictionary));
+
+        const dictionary = (response.data.dictionary)
+        const key = (Object.keys(dictionary));
+        // console.log(key)
+
+        const arr = response.data.dictionary[key];
+        // console.log(arr)
+
+        // const key2 = (Object.keys(arr));
+        // console.log(key2[0]);
+
+        const arr2 = response.data.dictionary[key].data;
+        console.log(arr2)
+
+        dispatchCards(setHarklist(arr2));
     }
 
-    function card(val){
-        return(
-            <Card/>
-        )
-    }
+    // function card(val){
+    //     return(
+    //         <Card/>
+    //     )
+    // }
     return(
         <div className='podcast'>
             <div className="podcast-text">
                 Discover new and popular podcasters, topics and intersts
-            </div>
-
-            <div>
+            </div>  
+            <div className='tags'>
                 <Tags />
             </div>
-            {/* <div className='container'>
-                { list.map(card) }
-            </div> */}
+            <div className='cards'>
+                <Card/>
+            </div>
         </div>
     )
 }

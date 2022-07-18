@@ -1,16 +1,25 @@
 import './Card.css'
 import image from './../../Images/goku.jpeg';
 import { useSelector } from 'react-redux';
+import { createRef } from 'react';
 function Card(){
-    const cards = useSelector((state) => state);
-    return(
+    const cards = useSelector((state) => state.allHarklists.harklists);
+
+    // console.log(cards);
+
+
+    const renderCards = cards.map((data, key)=>{
+
+        const {podcastImages, creator, series} = data;
+        return(
+            <>
             <div className="card">
                 <div className="podcast-image-container">
-                    <div className="podcast-image" id="first"></div>
-                    <div className="podcast-image" id="second"></div>
-                    <div className="podcast-image" id="third"></div>
-                    <div className="podcast-image" id="fourth"></div>
-                    <div className="podcast-image" id="fifth"></div>
+                    <div className="podcast-image" id="first"><img src={podcastImages[0]} alt="" /></div>
+                    <div className="podcast-image" id="second"><img src={podcastImages[1]} alt="" /></div>
+                    <div className="podcast-image" id="third"><img src={podcastImages[2]} alt="" /></div>
+                    <div className="podcast-image" id="fourth"><img src={podcastImages[3]} alt="" /></div>
+                    <div className="podcast-image" id="fifth"><img src={podcastImages[4]} alt="" /></div>
                     <div>
                         <div className="toggle"></div>
                         <div className="toggle"></div>
@@ -28,7 +37,7 @@ function Card(){
                             <img src={image} alt=""/>
                         </div>
                         <div className="user-info">
-                            <p className="user-name">Anna Oakes</p>
+                            <p className="user-name">{creator.name}</p>
                             <p className="hark-editor">HARK EDITOR</p>
                         </div>
                     </div>
@@ -42,7 +51,16 @@ function Card(){
                     </div>
                 </div>
             </div>  
+            </>
+        )
+        })
+
+    return(
+        <div className='cards'>
+            {renderCards}
+        </div>            
     )
 }
 
 export default Card;
+
