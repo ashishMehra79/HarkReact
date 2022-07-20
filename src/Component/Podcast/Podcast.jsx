@@ -8,9 +8,6 @@ import Tags from '../Tags/Tags';
 
 function Podcast(){
 
-    // const list = ['Wellness', 'Action', "Health"]
-
-
     // for tags
     const tags = useSelector((state) => state);
     const dispatchTags = useDispatch();
@@ -27,9 +24,6 @@ function Podcast(){
         fetchCards();
     },[]);
 
-    // console.log("tags:",tags);
-
-
     // for card
 
     const cards = useSelector((state) => state);
@@ -42,25 +36,11 @@ function Podcast(){
 
         const dictionary = (response.data.dictionary)
         const key = (Object.keys(dictionary));
-        // console.log(key)
-
         const arr = response.data.dictionary[key];
-        // console.log(arr)
-
-        // const key2 = (Object.keys(arr));
-        // console.log(key2[0]);
-
         const arr2 = response.data.dictionary[key].data;
-        console.log(arr2)
-
         dispatchCards(setHarklist(arr2));
     }
 
-    // function card(val){
-    //     return(
-    //         <Card/>
-    //     )
-    // }
     return(
         <div className='podcast'>
             <div className="podcast-text">

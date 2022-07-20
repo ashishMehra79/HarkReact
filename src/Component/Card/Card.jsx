@@ -5,9 +5,6 @@ import { createRef } from 'react';
 function Card(){
     const cards = useSelector((state) => state.allHarklists.harklists);
 
-    // console.log(cards);
-
-
     const renderCards = cards.map((data, key)=>{
 
         const {podcastImages, creator, series} = data;
@@ -20,11 +17,6 @@ function Card(){
                     <div className="podcast-image" id="third"><img src={podcastImages[2]} alt="" /></div>
                     <div className="podcast-image" id="fourth"><img src={podcastImages[3]} alt="" /></div>
                     <div className="podcast-image" id="fifth"><img src={podcastImages[4]} alt="" /></div>
-                    <div>
-                        <div className="toggle"></div>
-                        <div className="toggle"></div>
-                        <div className="toggle"></div>
-                    </div>
                 </div>
                 <div className='text'>
                     <h2>Unleash Your Inner Optimist</h2>

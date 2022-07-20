@@ -15,14 +15,8 @@
     margin-bottom: 15px;
 } 
 
-.container{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    overflow: scroll;
-}
 
-.container::-webkit-scrollbar {
+.cards::-webkit-scrollbar {
     display: none;
 }
 
@@ -34,13 +28,15 @@
 
 .cards{
     display: flex;
-    gap:10px;
+    flex-direction: row;
+    gap: 10px;
+    overflow: scroll;
 }
 
 
 @media only screen and (min-width: 991px) and (max-width:1199px) {
-    .container{
-        width: 80%;
+    .cards{
+        /* width: 80%; */
         padding: 0px 190px;
         display: flex;
         flex-direction: row;
@@ -50,12 +46,12 @@
 }
 
 @media only screen and (min-width: 1199px) and (max-width:1440px) {
-    .container{
-        width: 87.8%;
-        padding: 0px 176px;
+    .cards{
+        padding: 0px 100px;
         display: flex;
         flex-direction: row;
         gap: 10px;
         overflow: scroll;
+
     }    
 }
