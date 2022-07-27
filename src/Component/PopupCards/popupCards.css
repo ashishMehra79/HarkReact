@@ -1,1 +1,20 @@
+.article-share{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  padding:20px 16px;
+  width:196px;
+  heigth:56px;
+  background-color:#f7f7f7;
+  list-style-type:none;
+  cursor:pointer;
+}
 
+.article-shareItem{
+  border-right:1px solid #dfdfdf;
+  padding-right:16px;
+}
+
+.article-shareItem:hover{
+  opacity:0.5;
+}
