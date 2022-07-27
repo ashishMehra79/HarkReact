@@ -3,3 +3,25 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.popup-container button{
+    margin:0px;
+    padding:0px;
+    border:none;
+    background:none;
+    text-decoration:none;
+    cursor:pointer;
+    appearance:none;
+    color:#000;
+    font-family:"Times New Roman", Times, serif;
+    font-size:13px;
+    font-weigth:300;
+    letter-spacing:.06em;
+    line-height:14px;
+    overflow:hidden;
+    text-transform:uppercase;
+}
+
+.chevron, .xmark{
+    margin-left:5px;
+}
