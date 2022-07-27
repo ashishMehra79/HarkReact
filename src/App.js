@@ -3,14 +3,14 @@ import Signup from './Component/Signup/Signup';
 import Footer from './Component/Footer/Footer'
 import './App.css';
 import PopupCards from './Component/PopupCards/PopupCards';
-import React, {useState} from 'react;
+import React, {useState} from 'react';
 // import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
   return (
     <>
-//     <Router>
+{/* //     <Router> */}
     <div className= 'popup-container'>
     {(!buttonPopup) ?
     <button onClick= {()=>setButtonPopup(true)}>Share
@@ -26,7 +26,7 @@ function App() {
       <Podcast />
       <Signup />
       <Footer />
-//     </Router>
+{/* //     </Router> */}
 
     </>
   );
